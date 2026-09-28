@@ -1,0 +1,22 @@
+{
+  "slug": "base-backend",
+  "name": "Base Backend",
+  "category": "base_backend",
+  "surfaces": ["server"],
+  "framework": { "server": "hono" },
+  "engine": "bun",
+  "requiresDb": false,
+  "version": "1.0.0",
+  "repo": "https://github.com/umkm-ai/template-base-backend",
+  "config": [
+    { "key": "serviceName", "label": "Nama service", "type": "string", "required": true }
+  ],
+  "env": [
+    { "key": "PORT", "required": false, "default": "3000" }
+  ],
+  "scripts": {
+    "install": "bun install",
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts --target bun --outdir dist"
+  }
+}
